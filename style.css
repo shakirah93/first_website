@@ -138,10 +138,32 @@ input[type="email"] {
 }
 .flex-container {
   display: flex;
+  padding: 30px 0;
+  align-items: center;
+  justify-content: center;
+}
+.flex-container > div {
+  width: 50%;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 250px;
+  gap: 10px;
+}
+.grid-container > div {
+  background: brown;
+  padding: 10px;
 }
 
 @media screen and (max-width: 576px) {
   input[type="email"] {
     font-size: 14px;
+  }
+  .flex-container {
+    flex-direction: column-reverse;
+  }
+  .flex-container > div {
+    width: 100%;
   }
 }
