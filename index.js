@@ -249,3 +249,167 @@ const canDrive = myAge >= minimumDrivingAge;
 
 console.log("Can I drive? " + canDrive);
 
+const iAmAQueen = true;
+
+if (iAmAQueen) {
+  console.log("I am a Queen");
+}
+
+const personAge = 10;
+
+if (personAge >= 18) {
+  console.log("You are allowed on the platform");
+} else {
+  console.log("You are not allowed on this platform");
+}
+
+/*
+condition
+  ? "when the condition is true"
+  : "the statement you want to run when the condition is false";
+*/
+
+personAge >= 18
+  ? console.log("You are allowed on the platform")
+  : console.log("You are not allowed on this platform");
+
+function getFee(isMember) {
+  return isMember ? "2.00" : "10.00";
+}
+
+console.log(getFee(true));
+console.log(getFee(false));
+
+let yourAge = 10;
+
+if (yourAge < 13) {
+  console.log("You are a child");
+} else if (yourAge < 20) {
+  console.log("You are a teenager");
+} else if (yourAge < 65) {
+  console.log("You are an adult");
+} else {
+  console.log("You are a senior");
+}
+
+function calculateShippingFee(totalPurchase) {
+  if (totalPurchase < 50) {
+    return 10;
+  } else if (totalPurchase < 100) {
+    return 5;
+  } else {
+    return 0;
+  }
+}
+
+let shippingFee = calculateShippingFee(75);
+console.log("Your shipping fee is: " + shippingFee);
+
+function calculateGrade(score) {
+  if (score > 90) {
+    return "A+";
+  } else if (score > 80) {
+    return "A";
+  } else if (score > 70) {
+    return "B";
+  } else if (score > 60) {
+    return "C";
+  } else if (score > 50) {
+    return "D";
+  } else if (score > 40) {
+    return "E";
+  } else if (score > 30) {
+    return "F";
+  } else {
+    return "Invalid Score";
+  }
+}
+
+const grade = calculateGrade(70);
+console.log("Your grade is: " + grade);
+
+// Switch statements
+const currentDay = new Date().getDay();
+console.log(currentDay);
+
+switch (currentDay) {
+  case 0:
+    console.log("Today is Sunday");
+    break;
+
+  case 1:
+    console.log("Today is Monday");
+    break;
+
+  case 2:
+    console.log("Today is Tuesday");
+    break;
+
+  case 3:
+    console.log("Today is Wednesday");
+    break;
+
+  case 4:
+    console.log("Today is Thursday");
+    break;
+
+  case 5:
+    console.log("Today is Friday");
+    break;
+
+  case 6:
+    console.log("Today is Saturday");
+    break;
+
+  default:
+    console.log("Invalid value");
+}
+
+// WHILE LOOP
+let increment = 1;
+let total = 0;
+
+while (increment <= 10) {
+  total = increment;
+  increment = increment + 1;
+}
+
+console.log("Total no of shoes: " + total);
+
+// random number generator
+function randomNumber() {
+  return Math.random() * 1;
+}
+
+// while loop - random number
+let count = 1;
+while (count < 10) {
+  console.log(randomNumber());
+
+  count = count + 1;
+}
+
+// for loop
+let totalValue = 0;
+
+for (let i = 1; i <= 10; i++) {
+  totalValue = i;
+}
+
+console.log("Total no of shoes: " + totalValue);
+
+// for loop - random number
+for (let count = 1; count < 10; count++) {
+  console.log(randomNumber());
+}
+
+const namesArray = ["Shakirah", "Beryl", "Chantal", "Siwen", "Michaela"];
+const personArray = ["Shakirah", "Usman", 22];
+
+namesArray[0]; // Shakirah
+namesArray[1]; //Beryl
+namesArray[2]; // Chantal
+namesArray[3]; // Siwen
+namesArray[4]; // Michaela
+
+console.log(namesArray[3]);
