@@ -536,3 +536,40 @@ while (q < fruitAndVeg.length) {
 }
 
 console.log(noAvocados);
+
+const noAvocado = fruitAndVeg.filter((fruit) => !fruit.includes("avocado"));
+
+console.log(noAvocado);
+
+/*
+fruitAndVeg.filter(function (fruit) {
+  return !fruit.includes("avocado");
+});
+
+
+const filterNonAvocados = (fruit) => !fruit.includes("avocado")
+*/
+
+const evenNumbers = [2, 4, 6, 8, 10];
+
+// using for loop and empty to achieve .map method
+
+const evenNumbersDoubled = [];
+
+for (let i = 0; i < evenNumbers.length; i++) {
+  let doubled = evenNumbers[i] * 2;
+  evenNumbersDoubled.push(doubled);
+}
+
+console.log(evenNumbersDoubled);
+
+// working with .map method
+const numbersDoubled = evenNumbers.map((num) => num * 2);
+console.log(numbersDoubled); // [4, 8, 12, 16, 20]
+
+// chaining methods (using .map and .filter together)
+const numbersDoubledAndGreaterThanTen = evenNumbers
+  .map((num) => num * 2)
+  .filter((num) => num > 10);
+
+console.log(numbersDoubledAndGreaterThanTen); // [12, 16, 20]
