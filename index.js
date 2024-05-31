@@ -413,3 +413,126 @@ namesArray[3]; // Siwen
 namesArray[4]; // Michaela
 
 console.log(namesArray[3]);
+
+console.log(namesArray.length); // 5
+
+for (let i = 0; i < namesArray.length; i++) {
+  console.log(namesArray[i]);
+}
+
+// add an element at the end of an array
+namesArray.push("Rukiya");
+
+console.log(namesArray);
+
+// adds a new element at the beginning of an array
+namesArray.unshift("Beauty");
+
+console.log(namesArray);
+
+// remove an element at the end of an array
+namesArray.pop();
+
+console.log(namesArray);
+
+// remove an element at the beginning of an array
+namesArray.shift();
+
+console.log(namesArray);
+
+// ordering the elements in an array
+namesArray.sort();
+
+console.log(namesArray);
+
+// sorting in descending order
+namesArray.sort().reverse();
+
+console.log(namesArray);
+
+// sorting numbers in ascending order
+const nums = [1, 5, 3, 19, 2, 10];
+
+nums.sort(); // 1, 10, 19, 2, 3, 5
+
+console.log(nums);
+
+function sortNumberAscending(num1, num2) {
+  return num1 - num2;
+}
+
+sortNumberAscending(2, 3); // -1
+sortNumberAscending(7, 2); // 5
+
+nums.sort(sortNumberAscending);
+console.log(nums);
+
+/*
+// 1st
+[1, 5, 3, 19, 2, 10];
+
+sortNumberAscending(1, 5); // -4: it means the left value is lesser than the right value
+
+// 2nd
+[1, 5, 3, 19, 2, 10]
+
+sortNumberAscending(5, 3) // 2: it means the left value is greater than the right value
+
+// 3rd
+[1, 3, 5, 19, 2, 10]
+
+sortNumberAscending(5, 19) // -14
+
+// 4th
+[1, 3, 5, 19, 2, 10]
+
+sortNumberAscending(19, 2) // 17
+
+// 5th
+[1, 3, 5, 2, 19, 10]
+
+sortNumberAscending(19, 10) // 9
+
+// 6th
+[1, 3, 5, 2, 10, 19]
+
+// 8th
+sortNumberAscending(5, 2) // 3
+
+
+[1, 3, 2, 5, 10, 19]
+
+sortNumberAscending(3, 2) // 1
+
+[1, 2, 3, 5, 10, 19]
+
+*/
+
+nums.sort(sortNumberAscending).reverse();
+
+console.log(nums);
+
+const fruitAndVeg = [
+  "apple",
+  "orange",
+  "banana",
+  "kiwi",
+  "avocado",
+  "celery",
+  "aubergine",
+];
+
+let noAvocados = [];
+
+let q = 0;
+
+while (q < fruitAndVeg.length) {
+  if (fruitAndVeg[q] !== "avocado") {
+    noAvocados.push(fruitAndVeg[q]);
+  }
+
+  q++;
+  console.log(q);
+}
+
+console.log(noAvocados);
