@@ -78,8 +78,42 @@ class ClickButton extends React.Component {
   }
 }
 
+/* Another class component */
+class TestComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return React.createElement(
+      "div",
+      {},
+      React.createElement("p", {}, "This is a paragraph")
+    );
+  }
+}
+
+class H1Component extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return React.createElement(
+      "h1",
+      {
+        style: {
+          color: "green",
+          fontSize: "30px",
+        },
+      },
+      "This is a  heading text"
+    );
+  }
+}
+
 const domContainer = document.querySelector("#root");
-ReactDOM.render(React.createElement(ClickButton), domContainer);
+ReactDOM.render(React.createElement(H1Component), domContainer);
 
 /*
 React.createElement(
@@ -89,3 +123,8 @@ React.createElement(
 )
 <button id="click-button" class="btn" style="background: red" onclick="">Click to Reveal</button>
 */
+{
+  /* <div>
+  <p>This is a paragraph</p>
+</div>; */
+}
