@@ -19,8 +19,72 @@
         display: flex;
         gap: 10px;
       }
-      .books-wrapper img {
+      .books-wrapper img,
+      .book {
         width: 100%;
+      }
+
+      @media only screen and (max-width: 576px) {
+        .books-wrapper {
+          flex-direction: column;
+        }
+        h1 {
+          font-size: 20px;
+        }
+      }
+
+      /* tablet screen size */
+      @media only screen and (min-width: 577px) and (max-width: 768px) {
+        .books-wrapper {
+          flex-direction: column;
+        }
+      }
+
+      @media only screen and (min-width: 769px) {
+      }
+
+      h1:hover {
+        /* transform: translate(10px, 20px);
+        transform: rotate(20deg); */
+        transform: skew(30deg);
+        /* transform: scale(2, 4); */
+      }
+
+      .btn.btn-primary {
+        background-color: #0d6efd;
+        color: #fff;
+        transition-property: background-color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+      }
+      .btn.btn-primary:hover {
+        background-color: plum;
+      }
+      body {
+        background-color: yellowgreen;
+        animation-name: colorChange;
+        animation-duration: 4s;
+        animation-timing-function: ease-in;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: forwards;
+
+        /* alternatively, you can write on a straight line */
+        /* animation: colorChange 4s ease-in 2s infinite forwards; */
+      }
+      @keyframes colorChange {
+        0% {
+          background-color: yellowgreen;
+        }
+        25% {
+          background-color: blue;
+        }
+        50% {
+          background-color: green;
+        }
+        100% {
+          background-color: purple;
+        }
       }
     </style>
   </head>
